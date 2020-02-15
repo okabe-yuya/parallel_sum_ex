@@ -18,5 +18,5 @@ defmodule ParallelSum.DataCreater do
   def create_N_size_list(n) when n > 0 do
     Enum.map(1..n, fn _ -> create_random_num() end)
   end
-  def create_N_size_list(), do: :error
+  def create_N_size_list(_), do: :error
 end

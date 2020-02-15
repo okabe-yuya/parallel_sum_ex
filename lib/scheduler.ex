@@ -16,16 +16,16 @@ defmodule ParallelSum.Scheduler do
   @doc """
     N個の要素を持つ配列を指定数毎にチャンク分割するための関数
   """
-  def list_spliter(lst) when length(lst) > 0 do
+  def list_spliter([]), do: :error
+  def list_spliter(lst) do
     lst |> Enum.chunk_every(ParallelSum.Config.each_chunk_list_size_limit())
   end
-  def list_spliter(_), do: :error
 
   @doc """
     分割されたデータと算出された立ち上げるプロセス数を元にTask moduleを起動して再帰関数によって集計処理を実行
     各プロセスが算出した合計値がリストになって返ってくる
   """
-  def start_task(_, lst, _) when length(lst) == 0, do: :error
+  def start_task(_, [], _), do: :error
   def start_task(_, _, 0), do: :error
   def start_task("", _, _), do: :error
 

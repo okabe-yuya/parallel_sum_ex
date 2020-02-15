@@ -47,6 +47,22 @@
 - 3.ボトルネックの改善。再度、グラフ化
 - 4.並行化の恩恵を感じて脳汁を出す
 
+## Usage
+前提: Elixirがinstall済み
+
+> $ iex -S mix
+
+```
+N -> 配列の要素数
+mode -> sumの集計方法(recurcive -> 再帰処理, enum -> Enum.sum())
+```
+
+### 並行和(複数プロセスによる算出)
+> iex> ParallelSum.parallel_exec(N, mode)
+
+### 逐次和(単一プロセスによる算出)
+> iex> ParallelSum.serial_exec(N, mode)
+
 ## 参考文献
 - [並行コンピューティング技法]()
 - [random / Erlang Official Documents](http://erlang.org/doc/man/random.html)
