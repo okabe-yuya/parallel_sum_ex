@@ -1,0 +1,22 @@
+duration:1.0;mem stats:false;sys mem stats:false
+module;test;tags;iterations;elapsed
+ParallelSum.Bench	parallel: enum 100		50000	1691556
+ParallelSum.Bench	parallel: enum 1000		10000	3498089
+ParallelSum.Bench	parallel: enum 10000		100	1710637
+ParallelSum.Bench	parallel: enum 100000		1	4650929
+ParallelSum.Bench	parallel: enum 1000000		1	314724083
+ParallelSum.Bench	parallel: recursive 100		50000	1133886
+ParallelSum.Bench	parallel: recursive 1000		10000	2431725
+ParallelSum.Bench	parallel: recursive 10000		100	1089383
+ParallelSum.Bench	parallel: recursive 100000		1	1575123
+ParallelSum.Bench	parallel: recursive 1000000		1	262729181
+ParallelSum.Bench	serial: enum 100		10000000	7602978
+ParallelSum.Bench	serial: enum 1000		500000	3300818
+ParallelSum.Bench	serial: enum 10000		50000	3288046
+ParallelSum.Bench	serial: enum 100000		5000	3236625
+ParallelSum.Bench	serial: enum 1000000		500	3265449
+ParallelSum.Bench	serial: recursive 100		10000000	8017368
+ParallelSum.Bench	serial: recursive 1000		500000	3245805
+ParallelSum.Bench	serial: recursive 10000		50000	3204148
+ParallelSum.Bench	serial: recursive 100000		5000	3207689
+ParallelSum.Bench	serial: recursive 1000000		500	3207591
