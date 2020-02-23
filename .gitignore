@@ -24,3 +24,4 @@ parallel_sum-*.tar
 
 # Ignore build file
 .elixir_ls/
+/.elixir_ls
