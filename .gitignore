@@ -25,3 +25,11 @@ parallel_sum-*.tar
 # Ignore build file
 .elixir_ls/
 /.elixir_ls
+
+# virtual env for python
+/graphs_env
+/graphs_env/
+
+# jupyter cached file
+/.ipynb_checkpoints
+.ipynb_checkpoints/
