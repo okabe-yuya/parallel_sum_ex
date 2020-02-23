@@ -22,6 +22,23 @@ defmodule ParallelSum do
     Enum.sum(parallel_sum)
   end
 
+  @doc """
+    benchfella用の実行関数(算出結果が異なるとerrorになるため)
+  """
+  def bench_parallel_exec(_, ""), do: :error
+  def bench_parallel_exec([], _), do: :error
+  def bench_parallel_exec(dataset, mode) do
+    # 立ち上げるプロセス数を算出
+    process_num = ParallelSum.Scheduler.calc_total_process(length(dataset))
+    # プロセスを立ち上げて並行和を算出
+    parallel_sum = ParallelSum.Scheduler.start_task(
+      mode,
+      ParallelSum.Scheduler.list_spliter(dataset),
+      process_num
+    )
+    Enum.sum(parallel_sum)
+  end
+
 
   @doc """
     逐次処理によって1つのプロセスによって合計値を算出するpipeline関数
@@ -45,6 +62,12 @@ defmodule ParallelSum do
   end
   defp _serial_exec(_), do: :error
 
-  # TODO: 逐次処理と並行処理を順次実行して経過時間を測定する関数の実装
-  # def compere()
+  @doc """
+    benchfella用の実行関数(算出結果が異なるとerrorになるため)
+  """
+  def bench_serial_exec(_, ""), do: :error
+  def bench_serial_exec([], _), do: :error
+  def bench_serial_exec(dataset, mode) do
+    _serial_exec(mode).(dataset)
+  end
 end
