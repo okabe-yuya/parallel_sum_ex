@@ -24,3 +24,6 @@ parallel_sum-*.tar
 
 # Ignore build file
 .elixir_ls/
+
+# jupyter: virtual env data
+.graphs_env/
