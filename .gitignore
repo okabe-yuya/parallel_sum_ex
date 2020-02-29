@@ -26,4 +26,4 @@ parallel_sum-*.tar
 .elixir_ls/
 
 # jupyter: virtual env data
-./bench/graphs_env/
+/graphs_env/
