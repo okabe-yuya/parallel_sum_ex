@@ -1,9 +1,0 @@
-{application,parallel_sum,
-             [{applications,[kernel,stdlib,elixir,logger]},
-              {description,"parallel_sum"},
-              {modules,['Elixir.ParallelSum','Elixir.ParallelSum.Config',
-                        'Elixir.ParallelSum.DataCreater',
-                        'Elixir.ParallelSum.Scheduler',
-                        'Elixir.ParallelSum.Sum']},
-              {registered,[]},
-              {vsn,"0.1.0"}]}.

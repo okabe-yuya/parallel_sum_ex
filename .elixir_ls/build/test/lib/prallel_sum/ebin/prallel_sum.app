@@ -1,9 +1,0 @@
-{application,prallel_sum,
-             [{applications,[kernel,stdlib,elixir,logger]},
-              {description,"prallel_sum"},
-              {modules,['Elixir.PrallelSum','Elixir.PrallelSum.Config',
-                        'Elixir.PrallelSum.DataCreater',
-                        'Elixir.PrallelSum.Scheduler',
-                        'Elixir.PrallelSum.Sum']},
-              {registered,[]},
-              {vsn,"0.1.0"}]}.
