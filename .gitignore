@@ -27,3 +27,12 @@ parallel_sum-*.tar
 
 # jupyter: virtual env data
 bench/graphs_env/*
+/.elixir_ls
+
+# virtual env for python
+/graphs_env
+/graphs_env/
+
+# jupyter cached file
+/.ipynb_checkpoints
+.ipynb_checkpoints/
