@@ -1,0 +1,10 @@
+duration:1.0;mem stats:false;sys mem stats:false
+module;test;tags;iterations;elapsed
+ParallelSum.InitBench	parallel: enum 100		500000	2555564
+ParallelSum.InitBench	parallel: enum 1000		100000	2902751
+ParallelSum.InitBench	parallel: enum 10000		10000	1819477
+ParallelSum.InitBench	parallel: enum 100000		1000	1781611
+ParallelSum.InitBench	parallel: recursive 100		500000	2517027
+ParallelSum.InitBench	parallel: recursive 1000		100000	2878593
+ParallelSum.InitBench	parallel: recursive 10000		10000	1834528
+ParallelSum.InitBench	parallel: recursive 100000		1000	1710872
