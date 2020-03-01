@@ -9,7 +9,6 @@ defmodule ParallelSum.Bench do
   @dataset_1000 ParallelSum.DataCreater.create_N_size_list(1000)
   @dataset_10000 ParallelSum.DataCreater.create_N_size_list(10000)
   @dataset_100000 ParallelSum.DataCreater.create_N_size_list(100000)
-  @dataset_1000000 ParallelSum.DataCreater.create_N_size_list(1000000)
 
   # data size 100 -------------------------------------------
   ## recursive
@@ -85,24 +84,5 @@ defmodule ParallelSum.Bench do
 
   bench "serial: enum 100000" do
     ParallelSum.bench_serial_exec(@dataset_100000, @enum)
-  end
-
-  # data size 1000000 -------------------------------------------
-  ## recursive
-  bench "parallel: recursive 1000000" do
-    ParallelSum.bench_parallel_exec(@dataset_1000000, @recursive)
-  end
-
-  bench "serial: recursive 1000000" do
-    ParallelSum.bench_serial_exec(@dataset_1000000, @recursive)
-  end
-
-  ## enum
-  bench "parallel: enum 1000000" do
-    ParallelSum.bench_parallel_exec(@dataset_1000000, @enum)
-  end
-
-  bench "serial: enum 1000000" do
-    ParallelSum.bench_serial_exec(@dataset_1000000, @enum)
   end
 end
